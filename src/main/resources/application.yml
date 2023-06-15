@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: ${MYSQL_DB_URL:jdbc:mysql://localhost:3306/card_db}
+    username: ${MYSQL_CARD_USERNAME:mysql_card_username}
+    password: ${MYSQL_CARD_PASSWORD:mysql_card_password}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  flyway:
+    enabled: true
+
+springdoc:
+  api-docs:
+    path: "/api-docs"
+
+jwt:
+  secret: ${JWT_SECRET:complex-jwt-secret-key-here}
